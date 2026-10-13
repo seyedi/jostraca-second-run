@@ -1,0 +1,20 @@
+{
+  "name": "jostraca-second-run",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Demo: how Jostraca handles the second run of a generator after developers edit the generated output.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "run1": "node gen.mjs",
+    "edit": "node edit.mjs",
+    "run2": "node gen.mjs --v2",
+    "demo": "npm run run1 && npm run edit && npm run run2 && node inspect.mjs --final",
+    "reset": "rm -rf out out-default"
+  },
+  "dependencies": {
+    "jostraca": "0.39.0"
+  }
+}
